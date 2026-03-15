@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rizal Travelogue</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Rizal Travelogue</div>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#countries">Countries</a></li>
+            <li><a href="#map">Map</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero animate">
+    <h1>José Rizal’s Travels</h1>
+    <p>Follow the footsteps of José Rizal as he journeyed through 18 countries, experiencing cultures, history, and adventure.</p>
+</section>
+
+<section class="intro-section">
+  <div class="intro-text animate">
+    <h1>A slow travel & culture blog</h1>
+    <p>Welcome to <em>illumelation</em> — a blog for creative and intentional travellers who want to <strong>connect deeper</strong> with culture and have extraordinary experiences.</p>
+    <div class="scroll-down">↓</div>
+  </div>
+  <div class="intro-images">
+    <div class="main-image animate"><img src="image1.jpg" alt="Travel Scene"></div>
+    <div class="small-image animate"><img src="image2.jpg" alt="Traveler in Lavender"></div>
+  </div>
+</section>
+
+<!-- COUNTRY CAROUSEL -->
+<section id="countries">
+    <h2 class="section-title animate">Countries Visited</h2>
+    <div class="carousel-container animate">
+        <div class="carousel-arrow left" id="prev">&#10094;</div>
+        <div class="carousel-arrow right" id="next">&#10095;</div>
+        <div class="carousel-track" id="carousel-track">
+            <!-- 18 country boxes -->
+            <div class="country-box" data-country="Singapore"><h3>Singapore</h3><p>Rizal explored Singapore’s thriving port and learned about modern trade practices.</p></div>
+            <div class="country-box" data-country="Sri Lanka"><h3>Colombo, Sri Lanka</h3><p>In Colombo, Rizal studied local culture and the impact of colonial administration.</p></div>
+            <div class="country-box" data-country="Egypt"><h3>Egypt</h3><p>He marveled at the pyramids and ancient Egyptian history during his stay.</p></div>
+            <div class="country-box" data-country="Japan"><h3>Japan</h3><p>Rizal learned Japanese customs and admired the meticulous artistry of the culture.</p></div>
+            <div class="country-box" data-country="Naples, Italy"><h3>Naples, Italy</h3><p>He studied European art and literature while experiencing Italian culture.</p></div>
+            <div class="country-box" data-country="Marseilles, France"><h3>Marseilles, France</h3><p>A hub of French maritime commerce and culture enriched Rizal’s perspectives.</p></div>
+            <div class="country-box" data-country="Barcelona, Spain"><h3>Barcelona, Spain</h3><p>He explored Catalan art and urban life, deepening his European experiences.</p></div>
+            <div class="country-box" data-country="Madrid, Spain"><h3>Madrid, Spain</h3><p>Rizal engaged with Spanish intellectual circles and studied politics.</p></div>
+            <div class="country-box" data-country="Hong Kong"><h3>Hong Kong</h3><p>He observed the British colonial influence and thriving port economy.</p></div>
+            <div class="country-box" data-country="Macao"><h3>Macao</h3><p>Rizal learned about Portuguese trade and cultural blending in Asia.</p></div>
+            <div class="country-box" data-country="France"><h3>France</h3><p>He immersed in Parisian culture and revolutionary history.</p></div>
+            <div class="country-box" data-country="Prague, Czech Republic"><h3>Prague, Czech Republic</h3><p>He admired the architectural beauty and historical richness of Prague.</p></div>
+            <div class="country-box" data-country="Austria"><h3>Austria</h3><p>Rizal explored Vienna’s art scene and classical music culture.</p></div>
+            <div class="country-box" data-country="Germany"><h3>Germany</h3><p>He studied German literature, philosophy, and science during his stay.</p></div>
+            <div class="country-box" data-country="Switzerland"><h3>Switzerland</h3><p>Rizal experienced the natural beauty and neutral politics of Switzerland.</p></div>
+            <div class="country-box" data-country="Belgium"><h3>Belgium</h3><p>He engaged with European reformist ideas in Belgium.</p></div>
+            <div class="country-box" data-country="U.S.A."><h3>U.S.A.</h3><p>Rizal observed American innovations and political structures.</p></div>
+            <div class="country-box" data-country="England"><h3>England</h3><p>He explored London’s intellectual society and modern developments.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- MAP SECTION -->
+<section id="map" class="map-section animate">
+    <h2 class="section-title">Travel Map</h2>
+    <div class="map-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World Map">
+        <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="Airplane" class="airplane" id="airplane">
+    </div>
+</section>
+
+
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" id="close-lightbox">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 José Rizal Travelogue | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
