@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import countries from "../data/countries";
+import countries from "../data/Countries";
 import "./CountryPage.css";
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -39,7 +39,7 @@ export default function CountryPage() {
   return (
     <div className="cp-root">
       <div className="cp-wrap">
-        {/* ── TOP NAV ── */}
+        {/* The top navbar */}
         <nav className="cp-nav">
           <button className="cp-nav-btn" onClick={() => navigate("/")}>
             ⌂ Back to Map
@@ -142,6 +142,7 @@ export default function CountryPage() {
               >
                 <div className="cp-polaroid-img">
                   {/* Replace the div below with <img src={photo.src} alt={photo.label} /> when you have photos */}
+                  {/* We will be having one soon */}
                   <div className="cp-polaroid-placeholder">
                     <span className="cp-placeholder-icon">{country.flag}</span>
                     <span className="cp-placeholder-text">Add Photo</span>
