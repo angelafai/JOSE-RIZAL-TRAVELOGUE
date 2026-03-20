@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/Landingpage";
-// import CountryPage from "./components/CountryPage"; // ← uncomment when built
+import CountryPage from "./components/CountryPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/country/:slug" element={<CountryPage />} />
         {/* <Route path="/country/:slug" element={<CountryPage />} /> */}
       </Routes>
     </BrowserRouter>

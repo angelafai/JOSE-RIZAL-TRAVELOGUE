@@ -6,8 +6,21 @@ const countries = [
     region: "Southeast Asia",
     flag: "🇸🇬",
     year: "1882",
+    coordinates: [1.3521, 103.8198],
+    journal: `The island of Singapore greeted me with a warmth I had not anticipated — not merely of the climate, but of its people and its curious blend of East and West. I arrived aboard the Salvador in May of 1882, marveling at the bustling port alive with vessels from every corner of the globe.\n\nThe streets hummed with a medley of tongues — Chinese, Malay, Tamil, English — all woven together in a tapestry unlike anything I had witnessed in Manila. I spent my brief stay wandering its markets and botanical gardens, sketching in my notebook, and reflecting on what a truly cosmopolitan city might look like.\n\nIt was here that I first felt the vastness of the world beyond our archipelago, and the smallness of the borders men draw upon maps.`,
+    funFacts: [
+      "Rizal stopped in Singapore on his way to Europe in 1882 aboard the ship Salvador.",
+      "Singapore was then a British colonial port and one of Asia's busiest trading hubs.",
+      "Rizal noted the multicultural nature of Singapore in his travel diary.",
+      "The city impressed him with its orderly streets compared to Manila at the time.",
+      "It was his first stop on his journey that would eventually take him to Spain.",
+    ],
+    photos: [
+      { label: "Singapore Port, 1882" },
+      { label: "Botanical Gardens" },
+      { label: "Colonial Street View" },
+    ],
   },
-
   {
     id: 2,
     slug: "colombo",
@@ -15,8 +28,21 @@ const countries = [
     region: "Sri Lanka",
     flag: "🇱🇰",
     year: "1882",
+    coordinates: [6.9271, 79.8612],
+    journal: `Colombo revealed itself to me as a city of profound contrasts — ancient temples standing in the shadow of colonial architecture, the scent of spices mingling with sea air. Our ship docked briefly, and I seized every moment to observe this remarkable island.\n\nThe people of Ceylon, as it was known then, carried themselves with a quiet dignity that moved me deeply. I watched fishermen mend their nets at dawn, monks in saffron robes glide through the streets, and merchants haggle in a dozen languages at the waterfront market.\n\nI could not help but draw comparisons to our own Philippines — both islands colonized, both peoples resilient, both cultures rich beneath the surface of foreign rule.`,
+    funFacts: [
+      "Colombo was then called Ceylon and was under British colonial rule.",
+      "Rizal was struck by the similarities between Ceylon and the Philippines.",
+      "The city was a major stop on the maritime route between Asia and Europe.",
+      "Rizal observed Buddhist monks and temples during his brief stay.",
+      "Ceylon was famous for its cinnamon and tea exports during this era.",
+    ],
+    photos: [
+      { label: "Colombo Harbour" },
+      { label: "Temple of the Tooth" },
+      { label: "Colonial Architecture" },
+    ],
   },
-
   {
     id: 3,
     slug: "egypt",
@@ -24,17 +50,43 @@ const countries = [
     region: "North Africa",
     flag: "🇪🇬",
     year: "1882",
+    coordinates: [26.8206, 30.8025],
+    journal: `To pass through the Suez Canal is to pass through the very artery of the world's commerce — a miracle of human engineering carved through the desert sands. Egypt overwhelmed my senses in ways I struggle still to put to words.\n\nThe pyramids rose from the horizon like geometrical dreams, monuments to a civilization that had flourished and faded millennia before Spain ever set foot upon our shores. Standing before them, I felt the full weight of history — not as a burden, but as a reminder that all empires are mortal.\n\nI sketched furiously, wrote pages in my diary, and conversed with fellow passengers about the nature of civilization, colonization, and the indomitable spirit of ancient peoples.`,
+    funFacts: [
+      "Rizal passed through the Suez Canal, which had opened only 13 years earlier in 1869.",
+      "Egypt was under joint British and French influence during Rizal's visit.",
+      "He was deeply moved by the ancient pyramids and Egyptian civilization.",
+      "Rizal drew parallels between Egypt's colonial situation and the Philippines.",
+      "The Suez Canal dramatically shortened the voyage from Asia to Europe.",
+    ],
+    photos: [
+      { label: "The Suez Canal" },
+      { label: "The Great Pyramids" },
+      { label: "Cairo Streets" },
+    ],
   },
-
   {
     id: 4,
     slug: "hong-kong",
-    name: "Hong-Kong",
+    name: "Hong Kong",
     region: "East Asia",
     flag: "🇭🇰",
     year: "1888",
+    coordinates: [22.3193, 114.1694],
+    journal: `Hong Kong became for me a second home during the years I spent practicing medicine there. The colony perched dramatically upon its mountainous island, its harbor one of the finest I have ever seen — a forest of masts and steamship funnels against green peaks.\n\nI established a modest medical practice and found my Filipino patients there in need not only of medicine but of hope. It was in Hong Kong that I planned much of what would become my great work, and where I corresponded endlessly with friends in Europe and the Philippines.\n\nThe city taught me that a people in exile need not lose their identity — that one can carry one's nation in one's heart across any ocean.`,
+    funFacts: [
+      "Rizal lived and practiced medicine in Hong Kong from 1891 to 1892.",
+      "He established a medical clinic serving the Filipino community there.",
+      "Hong Kong was a British colony with a bustling international port.",
+      "Rizal planned his return to the Philippines from Hong Kong.",
+      "He wrote numerous letters to the La Liga Filipina from Hong Kong.",
+    ],
+    photos: [
+      { label: "Victoria Harbour" },
+      { label: "Medical Clinic" },
+      { label: "Hong Kong Streets" },
+    ],
   },
-
   {
     id: 5,
     slug: "japan",
@@ -42,8 +94,21 @@ const countries = [
     region: "East Asia",
     flag: "🇯🇵",
     year: "1888",
+    coordinates: [36.2048, 138.2529],
+    journal: `Japan astonished me utterly. Here was an Asian nation that had looked the modern world in the eye and declared itself equal — nay, superior — to any Western power. The Meiji reforms had transformed this island nation with breathtaking speed, and everywhere I looked I saw evidence of a people who refused to be left behind.\n\nI spent time in Tokyo, Osaka, and Nikko, sketching temples and gardens, learning fragments of the language, and marveling at the discipline and pride of the Japanese people. I could not suppress the thought: why could the Philippines not do the same?\n\nA young woman named O-Sei-San became my guide and friend during my weeks there, and through her eyes I came to understand Japan not as a curiosity but as an inspiration.`,
+    funFacts: [
+      "Rizal visited Japan in 1888 and was deeply impressed by the Meiji Restoration.",
+      "He met a Japanese woman named O-Sei-San who taught him about Japanese culture.",
+      "Japan's rapid modernization inspired Rizal's vision for the Philippines.",
+      "He visited Tokyo, Nikko, and Osaka during his stay.",
+      "Rizal studied Japanese art and noted similarities with Filipino aesthetics.",
+    ],
+    photos: [
+      { label: "Tokyo Streets, 1888" },
+      { label: "Nikko Temples" },
+      { label: "Mount Fuji View" },
+    ],
   },
-
   {
     id: 6,
     slug: "naples",
@@ -51,17 +116,43 @@ const countries = [
     region: "Italy",
     flag: "🇮🇹",
     year: "1882",
+    coordinates: [40.8518, 14.2681],
+    journal: `Naples erupted before me like a painting come to life — chaotic, magnificent, overwhelming. Mount Vesuvius loomed over the bay with quiet menace, and the city below it seemed to live with the reckless abandon of those who know they dwell in the shadow of catastrophe.\n\nI walked the narrow streets of the old city, visited the ruins of Pompeii, and stood at the crater's edge contemplating the terrible power of nature against the fragile constructions of mankind. The Neapolitans themselves charmed me with their passion and their music, their gestures as expressive as any language.\n\nHere the ancient and the modern collided most violently — Roman ruins beneath baroque churches, fishermen beside steamships. Italy was teaching me that civilization is never a straight line.`,
+    funFacts: [
+      "Naples was Rizal's first stop in continental Europe in 1882.",
+      "He visited the ruins of Pompeii, preserved by the eruption of Mount Vesuvius.",
+      "Naples was then part of the newly unified Kingdom of Italy.",
+      "Rizal sketched the Bay of Naples and the surrounding landscape.",
+      "The city's vibrant street life made a strong impression on the young Rizal.",
+    ],
+    photos: [
+      { label: "Bay of Naples" },
+      { label: "Pompeii Ruins" },
+      { label: "Mount Vesuvius" },
+    ],
   },
-
   {
     id: 7,
     slug: "marseilles",
-    name: "Marseillas",
+    name: "Marseilles",
     region: "France",
     flag: "🇫🇷",
     year: "1882",
+    coordinates: [43.2965, 5.3698],
+    journal: `Marseilles received me with the brisk efficiency of a great port city — all business and salt air and the cries of sailors. France's oldest city wore its age proudly, its ancient harbor surrounded by modern industry, its streets a labyrinth of history.\n\nI did not linger long, for Madrid was my destination, but what I saw of Marseilles left its mark. The freedom of the French people — to speak, to argue, to criticize their government openly in the cafes — struck me with the force of revelation. Men debated politics over coffee as though it were the most natural thing in the world.\n\nIn the Philippines, such conversations happened only in whispers. Here they happened at full voice. I began to understand what we were fighting for.`,
+    funFacts: [
+      "Marseilles was Rizal's entry point into France during his 1882 journey.",
+      "The city is France's oldest, founded by Greek colonists around 600 BC.",
+      "Rizal was struck by the freedom of political expression in French cafes.",
+      "Marseilles was one of Europe's busiest Mediterranean ports.",
+      "The experience of French liberty deepened Rizal's reformist ideals.",
+    ],
+    photos: [
+      { label: "Old Port of Marseilles" },
+      { label: "Notre-Dame de la Garde" },
+      { label: "Marseilles Harbor" },
+    ],
   },
-
   {
     id: 8,
     slug: "barcelona",
@@ -69,8 +160,21 @@ const countries = [
     region: "Spain",
     flag: "🇪🇸",
     year: "1882",
+    coordinates: [41.3851, 2.1734],
+    journal: `Barcelona welcomed me as no other Spanish city would — with energy, with independence of spirit, with a Catalan pride that reminded me oddly of our own Filipino sense of distinct identity. The city was in the midst of great transformation, Gaudí's strange and wonderful buildings rising like organic dreams from the old city fabric.\n\nI enrolled at the Universidad de Barcelona and threw myself into my studies of medicine with renewed passion. But I also wrote — long letters home, articles for newspapers, the first stirrings of what would become my literary life.\n\nThe Barcelonans were warm to me, curious about this young Filipino who spoke Spanish with a slight accent and carried always a notebook and a sketchpad. I was learning that the world was larger than the friars had told us.`,
+    funFacts: [
+      "Rizal arrived in Barcelona in 1882 to continue his medical studies.",
+      "He published his first major essay 'Amor Patrio' while in Barcelona.",
+      "Barcelona was a center of liberal and republican political thought in Spain.",
+      "Rizal was impressed by Catalan culture and its distinct identity from Castile.",
+      "He wrote to his family describing Barcelona as more open-minded than Madrid.",
+    ],
+    photos: [
+      { label: "Las Ramblas, 1882" },
+      { label: "Barcelona Cathedral" },
+      { label: "Gothic Quarter" },
+    ],
   },
-
   {
     id: 9,
     slug: "madrid",
@@ -78,6 +182,20 @@ const countries = [
     region: "Spain",
     flag: "🇪🇸",
     year: "1882",
+    coordinates: [40.4168, -3.7038],
+    journal: `Madrid was the heart of the empire that had ruled my people for three centuries — and I had come to study it from the inside, to understand its institutions, its people, its contradictions. The city was grand and melancholy in equal measure, its wide boulevards and royal palaces monuments to a power that was slowly, inexorably fading.\n\nI enrolled at the Universidad Central de Madrid and studied medicine and philosophy with fierce dedication. But my true education happened in the cafes of the Puerta del Sol, in the Prado where I spent hours before the great paintings, in the Ateneo where ideas clashed and sparked.\n\nIt was in Madrid that I truly became a writer, a thinker, a propagandist for the Filipino cause. It was here that I began to understand that the pen might accomplish what the sword could not.`,
+    funFacts: [
+      "Rizal lived in Madrid for several years studying at the Universidad Central.",
+      "He finished his medical degree specializing in ophthalmology in Madrid.",
+      "Rizal frequented the Ateneo de Madrid, a center of intellectual life.",
+      "He began writing Noli Me Tangere during his time in Madrid and Berlin.",
+      "Madrid was the capital of the Spanish empire that governed the Philippines.",
+    ],
+    photos: [
+      { label: "Puerta del Sol" },
+      { label: "El Prado Museum" },
+      { label: "Universidad Central" },
+    ],
   },
 ];
 
