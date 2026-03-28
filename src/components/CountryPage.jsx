@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { countries } from "./data/countries";
+import { countries } from "../data/countries.js";
 import "./CountryPage.css";
 
 export default function CountryPage() {
