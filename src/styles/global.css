@@ -1,41 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,500;1,400&display=swap");
 
-/* -- Design Tokens ------------*/
-
+/* ─── Tokens ─────────────────────────────────────────────── */
 :root {
-  --parchment: #f5edda;
-  --parchment-mid: #ede0c4;
-  --parchment-deep: #d9c9a3;
-  --parchment-dark: #c4b08a;
-  --ink: #1a140c;
-  --ink-mid: #3a2e1e;
-  --ink-light: #6b5a3e;
-  --ink-faint: #9c8b6e;
-  --gold: #c8a96e;
-  --gold-light: #e8d4a0;
-  --gold-dark: #a07840;
-  --red-seal: #8b2c2c;
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --gray-50: #f4f4f5;
+  --gray-100: #e4e4e7;
+  --gray-200: #d4d4d8;
+  --gray-400: #a1a1aa;
+  --gray-500: #71717a;
+  --gray-600: #52525b;
+  --gray-800: #27272a;
+  --gray-900: #18181b;
+  --black: #09090b;
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Cormorant Garamond", Georgia, serif;
-  --font-accent: "IM Fell English", Georgia, serif;
+  --accent: #b45309;
+  --accent-bg: #fef3c7;
+  --accent-mid: #d97706;
 
-  /* -- Accessible large base size */
+  --font-heading: "DM Sans", system-ui, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
 
-  --text-base: 20px;
-  --text-sm: 17px;
-  --text-xs: 15px;
-  --text-lg: 23px;
-  --text-xl: 28px;
-  --text-2xl: 36px;
-  --text-3xl: 48px;
-  --text-4xl: 64px;
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-base: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 42px;
+  --text-4xl: 58px;
 
-  --nav-width: 270px;
-  --radius: 3px;
+  --nav-width: 256px;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
-/* -- Reset ----------*/
 *,
 *::before,
 *::after {
@@ -43,33 +43,20 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--parchment);
-  color: var(--ink);
+  background: var(--white);
+  color: var(--gray-900);
   font-family: var(--font-body);
   font-size: var(--text-base);
-  line-height: 1.75;
-  overflow-x: hidden;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* -- This is the paper grain texture -------- */
-
-.paper-texture {
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 999;
-  opacity: 0.55;
-}
-
-/* -- Layout Shell ----------*/
-
+/* ─── Shell ──────────────────────────────────────────────── */
 .app-shell {
   display: flex;
   min-height: 100vh;
@@ -78,125 +65,88 @@ body {
 .page-content {
   flex: 1;
   margin-left: var(--nav-width);
+  background: var(--white);
   min-height: 100vh;
-  transition: margin-left 0.35s ease;
 }
-
 @media (max-width: 768px) {
   .page-content {
     margin-left: 0;
   }
 }
 
-/* -- Shared Page Wrapper --------- */
-
+/* ─── Page Wrapper ───────────────────────────────────────── */
 .page-wrapper {
-  max-width: 860px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 3rem 2.5rem 6rem;
+  padding: 4rem 2.5rem 8rem;
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(14px);
   transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
-
 .page-wrapper.loaded {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* -- Shared Page Header ---------- */
-
+/* ─── Page Header ────────────────────────────────────────── */
 .page-header {
   margin-bottom: 3rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--parchment-deep);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .page-eyebrow {
-  display: block;
-  font-family: var(--font-accent);
-  font-style: italic;
+  display: inline-block;
+  font-family: var(--font-heading);
   font-size: var(--text-xs);
-  letter-spacing: 0.25rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-faint);
-  margin-bottom: 0.5rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
 }
-
 .page-title {
   font-family: var(--font-display);
   font-size: var(--text-3xl);
-  font-style: italic;
-  font-weight: 700;
-  color: var(--ink);
+  color: var(--black);
   line-height: 1.1;
-  letter-spacing: -0.2em;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
 }
-
 .page-subtitle {
-  font-family: var(--font-body);
   font-size: var(--text-lg);
-  color: var(--ink-height);
-  margin-top: 0.5rem;
-  font-style: italic;
-  line-height: 1.6;
+  color: var(--gray-500);
+  line-height: 1.7;
+  font-family: var(--font-body);
 }
 
-/* -- Gold Rule -------- */
-
-.gold-rule {
-  height: 1px;
-  background: linear-gradient(to right, var(--gold), transparent);
-  margin: 2rem 0;
-  opacity: 0.6;
-}
-.gold-rule.center {
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-}
-
-/* -- Section Title --------- */
-
+/* ─── Section Heading ────────────────────────────────────── */
 .section-heading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: var(--text-xl);
-  font-weight: 600;
-  color: var(--ink);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
-.section-heading::after {
-  content: "";
-  flex: 1;
+
+/* ─── Divider ────────────────────────────────────────────── */
+.divider {
   height: 1px;
-  background: var(--parchment-deep);
+  background: var(--gray-100);
+  margin: 3rem 0;
 }
 
-/* -- Ink divider ----------- */
-
-.ink-divider {
-  text-align: center;
-  color: var(--gold);
-  letter-spacing: 0.8em;
-  font-size: var(--text-xs);
-  margin: 2rem 0;
-}
-
-/* -- Scrollbar ----------- */
-
+/* ─── Scrollbar ──────────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--parchment-mid);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--parchment-dark);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--gold);
+  background: var(--gray-200);
+  border-radius: 99px;
 }

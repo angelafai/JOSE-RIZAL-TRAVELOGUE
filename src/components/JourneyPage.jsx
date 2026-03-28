@@ -6,215 +6,197 @@ import "./Pages.css";
 const FULL_TIMELINE = [
   {
     date: "June 19, 1861",
-    country: null,
+    slug: null,
     event: "Born in Calamba, Laguna, Philippines.",
   },
   {
     date: "May 3, 1882",
-    country: "singapore",
+    slug: "singapore",
     event: "Departs Manila secretly aboard the Salvadora.",
   },
   {
     date: "May 8, 1882",
-    country: "singapore",
+    slug: "singapore",
     event: "Arrives in Singapore — first foreign soil.",
   },
   {
     date: "May 1882",
-    country: "sri-lanka",
+    slug: "sri-lanka",
     event: "Stops in Colombo, Ceylon (Sri Lanka).",
   },
   {
     date: "May 1882",
-    country: "egypt",
+    slug: "egypt",
     event: "Transits the Suez Canal; sees Port Said, Egypt.",
   },
   {
     date: "June 1882",
-    country: "italy",
+    slug: "italy",
     event: "Arrives in Naples — first step on European soil. Climbs Vesuvius.",
   },
   {
     date: "June 1882",
-    country: "france",
+    slug: "france",
     event: "Passes through Marseilles en route to Spain.",
   },
   {
     date: "June 16, 1882",
-    country: "spain",
+    slug: "spain",
     event: "Arrives in Barcelona, Spain.",
   },
   {
     date: "Late 1882",
-    country: "spain",
+    slug: "spain",
     event: "Enrolls at the Universidad Central de Madrid.",
   },
   {
     date: "June 21, 1884",
-    country: "spain",
-    event: "Delivers celebrated toast at banquet honoring Luna and Hidalgo.",
+    slug: "spain",
+    event: "Delivers celebrated toast honoring Luna and Hidalgo.",
   },
   {
     date: "1885",
-    country: "spain",
-    event: "Earns Licentiate in Medicine from Madrid university.",
+    slug: "spain",
+    event: "Earns Licentiate in Medicine from Madrid.",
   },
   {
     date: "1885",
-    country: "france",
-    event: "Studies ophthalmology in Paris under Dr. Louis de Weckert.",
+    slug: "france",
+    event: "Studies ophthalmology in Paris under Dr. de Weckert.",
   },
   {
     date: "Feb 1886",
-    country: "germany",
-    event:
-      "Arrives in Heidelberg; works at the university eye clinic under Dr. Otto Becker.",
+    slug: "germany",
+    event: "Arrives in Heidelberg; works at the university eye clinic.",
   },
   {
     date: "Nov 1886",
-    country: "germany",
+    slug: "germany",
     event: "Moves to Berlin to complete Noli Me Tangere.",
   },
   {
     date: "March 21, 1887",
-    country: "germany",
-    event: "Noli Me Tangere published in Berlin — funded by Máximo Viola.",
+    slug: "germany",
+    event: "Noli Me Tangere published in Berlin.",
   },
   {
     date: "1887",
-    country: "austria",
+    slug: "austria",
     event: "Visits Vienna during Central European travels.",
   },
   {
     date: "1887",
-    country: "czech-republic",
+    slug: "czech-republic",
     event: "Visits Prague; admires the ancient Bohemian capital.",
   },
   {
     date: "1887",
-    country: "switzerland",
-    event: "Travels through Geneva and Zurich, Switzerland.",
+    slug: "switzerland",
+    event: "Travels through Geneva and Zurich.",
   },
   {
     date: "Feb 1888",
-    country: "hong-kong",
+    slug: "hong-kong",
     event: "First visit to Hong Kong en route to Japan.",
   },
   {
     date: "Feb 1888",
-    country: "macao",
-    event: "Short visit to Macao; sees the ruins of St. Paul's Cathedral.",
+    slug: "macao",
+    event: "Short visit to Macao; sees St. Paul's ruins.",
   },
-  {
-    date: "Feb 28, 1888",
-    country: "japan",
-    event: "Arrives in Yokohama, Japan.",
-  },
+  { date: "Feb 28, 1888", slug: "japan", event: "Arrives in Yokohama, Japan." },
   {
     date: "March–April 1888",
-    country: "japan",
-    event: "Spends 45 days in Tokyo; meets O-Sei-San (Seiko Usui).",
+    slug: "japan",
+    event: "Spends 45 days in Tokyo; meets O-Sei-San.",
   },
   {
     date: "April 13, 1888",
-    country: "japan",
-    event: "Departs Japan reluctantly, bound for the United States.",
+    slug: "japan",
+    event: "Departs Japan reluctantly for the United States.",
   },
   {
     date: "April 28, 1888",
-    country: "usa",
+    slug: "usa",
     event: "Arrives in San Francisco; quarantined for two weeks.",
   },
   {
     date: "May 1888",
-    country: "usa",
-    event: "Crosses the United States by rail: Sacramento, Denver, Chicago.",
+    slug: "usa",
+    event: "Crosses the United States by rail.",
   },
-  { date: "May 16, 1888", country: "usa", event: "Arrives in New York City." },
+  { date: "May 16, 1888", slug: "usa", event: "Arrives in New York City." },
   {
     date: "May 1888",
-    country: "england",
+    slug: "england",
     event: "Arrives in London via Liverpool.",
   },
   {
     date: "1888",
-    country: "england",
-    event: "Works daily in the British Museum, transcribing Morga's Sucesos.",
+    slug: "england",
+    event: "Works daily in the British Museum transcribing Morga.",
   },
   {
     date: "1890",
-    country: "belgium",
-    event: "Moves to Brussels; begins writing El Filibusterismo.",
-  },
-  {
-    date: "1890–1891",
-    country: "france",
-    event: "Visits Paris again; engaged with Filipino reformists.",
+    slug: "belgium",
+    event: "Moves to Brussels; begins El Filibusterismo.",
   },
   {
     date: "Sept 18, 1891",
-    country: "belgium",
-    event: "El Filibusterismo published in Ghent — funded by Valentin Ventura.",
+    slug: "belgium",
+    event: "El Filibusterismo published in Ghent.",
   },
   {
     date: "Nov 1891",
-    country: "hong-kong",
-    event: "Returns to Hong Kong; establishes ophthalmology practice.",
+    slug: "hong-kong",
+    event: "Returns to Hong Kong; opens ophthalmology practice.",
   },
   {
     date: "1892",
-    country: "hong-kong",
-    event:
-      "Negotiates with British Borneo for a Filipino colony; performs cataract surgery on his mother.",
+    slug: "hong-kong",
+    event: "Performs cataract surgery on his mother; plans Borneo colony.",
   },
   {
     date: "June 26, 1892",
-    country: null,
-    event: "Returns to Manila despite danger.",
+    slug: null,
+    event: "Returns to Manila despite the danger.",
   },
   {
     date: "July 3, 1892",
-    country: null,
-    event: "Founds La Liga Filipina in Manila — arrested within days.",
+    slug: null,
+    event: "Founds La Liga Filipina — arrested within days.",
   },
-  {
-    date: "July 1892",
-    country: null,
-    event: "Exiled to Dapitan, Mindanao — begins 4 years of exile.",
-  },
+  { date: "July 1892", slug: null, event: "Exiled to Dapitan, Mindanao." },
   {
     date: "1892–1896",
-    country: null,
+    slug: null,
     event:
-      "Years in Dapitan: builds a school, runs a farm, practices medicine, conducts scientific research. Falls in love with Josephine Bracken.",
+      "Exile in Dapitan: teaches, farms, practices medicine, falls in love with Josephine Bracken.",
   },
   {
     date: "July 1896",
-    country: null,
-    event: "Volunteers as a military doctor for Cuba; departs the Philippines.",
+    slug: null,
+    event: "Volunteers as military doctor for Cuba; departs Philippines.",
   },
   {
     date: "Oct 1896",
-    country: null,
+    slug: null,
     event: "Arrested in Barcelona; returned to Manila for trial.",
   },
   {
     date: "Dec 26, 1896",
-    country: null,
-    event:
-      "Found guilty of rebellion, sedition, and conspiracy. Sentenced to death.",
+    slug: null,
+    event: "Found guilty of rebellion. Sentenced to death.",
   },
   {
     date: "Dec 29, 1896",
-    country: null,
-    event:
-      "Writes Mi Último Adiós; hides it in a small oil lamp for his sister Trinidad.",
+    slug: null,
+    event: "Writes Mi Último Adiós; hides it in an oil lamp.",
   },
   {
     date: "Dec 30, 1896",
-    country: null,
-    event:
-      "Executed by firing squad at Bagumbayan, Manila. He is 35 years old. He faces his executioners.",
+    slug: null,
+    event: "Executed by firing squad at Bagumbayan, Manila. He is 35.",
   },
 ];
 
@@ -230,52 +212,47 @@ export default function JourneyPage() {
 
   return (
     <div className={`page-wrapper ${loaded ? "loaded" : ""}`}>
-      <div className="paper-texture" />
-
       <header className="page-header">
-        <span className="page-eyebrow">1861 – 1896</span>
-        <h1 className="page-title">The Full Journey</h1>
+        <span className="page-eyebrow">Chronology</span>
+        <h1 className="page-title">Full Journey</h1>
         <p className="page-subtitle">
-          Every significant date, every crossing, every milestone — from Calamba
-          to Bagumbayan.
+          Every significant date from Calamba to Bagumbayan.
         </p>
       </header>
 
       <div className="journey-timeline">
         {FULL_TIMELINE.map((entry, i) => {
-          const country = getCountry(entry.country);
+          const country = getCountry(entry.slug);
           return (
             <div
               key={i}
-              className={`jt-entry ${country ? "has-country" : ""}`}
+              className={`jt-entry ${country ? "clickable" : ""}`}
               onClick={() => country && navigate(`/country/${country.slug}`)}
-              style={{ cursor: country ? "pointer" : "default" }}
             >
-              <div className="jt-date">{entry.date}</div>
+              <span className="jt-date">{entry.date}</span>
               <div
-                className="jt-dot"
-                style={{
-                  background: country
-                    ? country.coverColor
-                    : "var(--parchment-dark)",
-                }}
+                className={`jt-dot ${country ? "colored" : ""}`}
+                style={
+                  country
+                    ? {
+                        background: country.coverColor,
+                        outlineColor: "transparent",
+                      }
+                    : {}
+                }
               />
               <div className="jt-body">
                 {country && (
                   <span
-                    className="jt-country-tag"
-                    style={{
-                      background: `${country.coverColor}18`,
-                      borderColor: `${country.coverColor}55`,
-                      color: country.coverColor,
-                    }}
+                    className="jt-country-badge"
+                    style={{ background: country.coverColor }}
                   >
                     {country.name}
                   </span>
                 )}
                 <p className="jt-event">{entry.event}</p>
                 {country && (
-                  <span className="jt-link">Read journal entry →</span>
+                  <span className="jt-link">View journal entry →</span>
                 )}
               </div>
             </div>

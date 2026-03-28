@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { glossaryTerms } from "../data/glossary";
+import { glossaryTerms } from "../data/glossary.js";
 import "./Pages.css";
 
 const CATEGORIES = [
@@ -9,35 +9,32 @@ const CATEGORIES = [
 
 export default function GlossaryPage() {
   const [loaded, setLoaded] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [active, setActive] = useState("All");
   useEffect(() => {
     setTimeout(() => setLoaded(true), 80);
   }, []);
 
   const filtered =
-    activeCategory === "All"
+    active === "All"
       ? glossaryTerms
-      : glossaryTerms.filter((t) => t.category === activeCategory);
+      : glossaryTerms.filter((t) => t.category === active);
 
   return (
     <div className={`page-wrapper ${loaded ? "loaded" : ""}`}>
-      <div className="paper-texture" />
       <header className="page-header">
         <span className="page-eyebrow">Reference</span>
         <h1 className="page-title">Glossary</h1>
         <p className="page-subtitle">
-          Key terms, people, movements, and events in the world of José Rizal.
-          Essential reading for understanding his journey.
+          Key terms, movements, and events in the world of José Rizal.
         </p>
       </header>
 
-      {/* Category filter */}
-      <div className="glossary-filter">
+      <div className="glossary-filters">
         {CATEGORIES.map((cat) => (
           <button
             key={cat}
-            className={`glossary-filter-btn ${activeCategory === cat ? "active" : ""}`}
-            onClick={() => setActiveCategory(cat)}
+            className={`glossary-filter-btn ${active === cat ? "active" : ""}`}
+            onClick={() => setActive(cat)}
           >
             {cat}
           </button>
@@ -47,7 +44,7 @@ export default function GlossaryPage() {
       <div className="glossary-list">
         {filtered.map((entry) => (
           <div key={entry.term} className="glossary-entry">
-            <div className="glossary-term-col">
+            <div>
               <h2 className="glossary-term">{entry.term}</h2>
               <span className="glossary-category">{entry.category}</span>
             </div>

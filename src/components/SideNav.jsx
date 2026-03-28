@@ -3,45 +3,35 @@ import { NavLink, useLocation } from "react-router-dom";
 import "./SideNav.css";
 
 const NAV_ITEMS = [
-  { path: "/", label: "Home", icon: "⊕", eyebrow: "Start Here" },
-  { path: "/bio", label: "About Rizal", icon: "✦", eyebrow: "The Man" },
-  { path: "/journey", label: "Full Journey", icon: "↝", eyebrow: "Chronology" },
+  { path: "/", label: "Home", icon: "🏠", sub: "Start here" },
+  { path: "/bio", label: "About Rizal", icon: "👤", sub: "The man" },
+  { path: "/journey", label: "Full Journey", icon: "🗓", sub: "Chronology" },
   {
     path: "/countries",
     label: "Destinations",
-    icon: "◎",
-    eyebrow: "18 Countries",
+    icon: "🌍",
+    sub: "18 countries",
   },
   {
     path: "/works",
     label: "Works & Writings",
-    icon: "✒",
-    eyebrow: "Literary Map",
+    icon: "📖",
+    sub: "Literary map",
   },
-  {
-    path: "/people",
-    label: "People He Met",
-    icon: "❋",
-    eyebrow: "Connections",
-  },
-  { path: "/glossary", label: "Glossary", icon: "▤", eyebrow: "Reference" },
+  { path: "/people", label: "People He Met", icon: "🤝", sub: "Connections" },
+  { path: "/glossary", label: "Glossary", icon: "📚", sub: "Reference" },
 ];
 
 export default function SideNav() {
-  const [open, setOpen] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-
-  // Close mobile nav on route change
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [location]);
+  useEffect(() => setMobileOpen(false), [location]);
 
   return (
     <>
-      {/* Mobile hamburger */}
+      {/* Mobile toggle */}
       <button
-        className="mobile-menu-btn"
+        className="nav-mobile-btn"
         onClick={() => setMobileOpen(true)}
         aria-label="Open menu"
       >
@@ -50,70 +40,50 @@ export default function SideNav() {
         <span />
       </button>
 
-      {/* Overlay for mobile */}
       {mobileOpen && (
         <div className="nav-overlay" onClick={() => setMobileOpen(false)} />
       )}
 
-      {/* Sidebar */}
-      <nav
-        className={`sidenav ${open ? "open" : "collapsed"} ${mobileOpen ? "mobile-open" : ""}`}
-      >
-        {/* Collapse toggle (desktop) */}
-        <button
-          className="collapse-btn"
-          onClick={() => setOpen(!open)}
-          aria-label={open ? "Collapse sidebar" : "Expand sidebar"}
-        >
-          {open ? "‹" : "›"}
-        </button>
-
-        {/* Logo / Brand */}
-        <div className="sidenav-brand">
-          <div className="brand-seal">JPR</div>
-          {open && (
-            <div className="brand-text">
-              <span className="brand-title">José Rizal</span>
-              <span className="brand-sub">Grand Tour · 1882–1892</span>
-            </div>
-          )}
+      <nav className={`sidenav ${mobileOpen ? "open" : ""}`}>
+        {/* Brand */}
+        <div className="nav-brand">
+          <div className="nav-logo">JPR</div>
+          <div className="nav-brand-text">
+            <span className="nav-brand-name">José Rizal</span>
+            <span className="nav-brand-sub">Travels · 1882–1892</span>
+          </div>
         </div>
 
-        <div className="gold-rule-nav" />
+        <div className="nav-divider" />
 
-        {/* Nav links */}
-        <ul className="sidenav-links">
+        {/* Links */}
+        <ul className="nav-list">
           {NAV_ITEMS.map((item) => (
             <li key={item.path}>
               <NavLink
                 to={item.path}
                 end={item.path === "/"}
                 className={({ isActive }) =>
-                  `sidenav-link ${isActive ? "active" : ""}`
+                  `nav-link ${isActive ? "active" : ""}`
                 }
               >
-                <span className="nav-icon">{item.icon}</span>
-                {open && (
-                  <span className="nav-label-group">
-                    <span className="nav-eyebrow">{item.eyebrow}</span>
-                    <span className="nav-label">{item.label}</span>
-                  </span>
-                )}
+                <span className="nav-link-icon">{item.icon}</span>
+                <span className="nav-link-text">
+                  <span className="nav-link-label">{item.label}</span>
+                  <span className="nav-link-sub">{item.sub}</span>
+                </span>
               </NavLink>
             </li>
           ))}
         </ul>
 
-        {/* Footer quote */}
-        {open && (
-          <div className="sidenav-footer">
-            <div className="gold-rule-nav" />
-            <p className="nav-quote">
-              "The youth is the hope of our motherland."
-            </p>
-            <p className="nav-quote-attr">— José Rizal</p>
-          </div>
-        )}
+        {/* Footer */}
+        <div className="nav-footer">
+          <div className="nav-divider" />
+          <p className="nav-footer-text">
+            "The youth is the hope of our motherland."
+          </p>
+        </div>
       </nav>
     </>
   );

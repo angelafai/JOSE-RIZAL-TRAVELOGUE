@@ -1,106 +1,98 @@
 .bio-essay p {
   font-size: var(--text-lg);
-  line-height: 1.9;
-  color: var(--ink-mid);
-  margin-bottom: 1.4rem;
-}
-.bio-essay p:first-of-type::first-letter {
-  float: left;
-  font-family: var(--font-display);
-  font-size: 4.5rem;
-  line-height: 0.8;
-  margin: 0.1em 0.1em 0 0;
-  color: var(--gold-dark);
-  font-weight: 700;
-}
-.bio-pull-quote {
-  border-left: 3px solid var(--gold);
-  padding: 1.25rem 1.5rem;
-  margin: 2rem 0;
-  background: rgba(200, 169, 110, 0.06);
-}
-.bio-pull-quote p {
-  font-family: var(--font-display);
-  font-size: var(--text-xl) !important;
-  font-style: italic;
-  color: var(--ink) !important;
-  margin: 0 0 0.5rem !important;
-  line-height: 1.5 !important;
-}
-.bio-pull-quote cite {
-  font-family: var(--font-accent);
-  font-size: var(--text-sm);
-  color: var(--ink-faint);
-  font-style: italic;
+  line-height: 1.85;
+  color: var(--gray-700, var(--gray-600));
+  margin-bottom: 1.25rem;
 }
 
-/* Facts grid */
+.bio-quote {
+  border-left: 3px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  background: var(--gray-50);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--gray-900);
+  line-height: 1.6;
+  font-style: italic;
+}
+.bio-quote cite {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-style: normal;
+  color: var(--gray-400);
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+/* Facts table */
 .bio-facts {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  border: 1px solid var(--parchment-deep);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 .bio-fact {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
   padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--parchment-deep);
+  border-bottom: 1px solid var(--gray-100);
   align-items: start;
 }
 .bio-fact:last-child {
   border-bottom: none;
 }
+.bio-fact:nth-child(even) {
+  background: var(--gray-50);
+}
+
 .bio-fact-label {
-  font-family: var(--font-accent);
+  font-family: var(--font-heading);
   font-size: var(--text-sm);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  padding-top: 0.1rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  padding-top: 0.05rem;
 }
 .bio-fact-value {
   font-size: var(--text-base);
-  color: var(--ink-mid);
+  color: var(--gray-800);
   line-height: 1.6;
 }
 
-/* Life timeline */
+/* Timeline */
 .bio-timeline {
   display: flex;
   flex-direction: column;
-  gap: 0;
   position: relative;
-  padding-left: 7rem;
+  padding-left: 8rem;
 }
 .bio-timeline::before {
   content: "";
   position: absolute;
-  left: 5.5rem;
-  top: 0.6rem;
-  bottom: 0;
+  left: 6.6rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
   width: 1px;
-  background: var(--parchment-deep);
+  background: var(--gray-100);
 }
-.bio-tl-entry {
+.bio-tl-row {
   display: flex;
   align-items: flex-start;
-  gap: 1.25rem;
-  padding-bottom: 1.75rem;
   position: relative;
+  padding-bottom: 1.5rem;
 }
 .bio-tl-year {
   position: absolute;
-  left: -7rem;
-  width: 5rem;
+  left: -8rem;
+  width: 6.5rem;
   text-align: right;
-  font-family: var(--font-accent);
+  font-family: var(--font-heading);
   font-size: var(--text-sm);
-  color: var(--gold-dark);
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--accent);
   padding-top: 0.15rem;
-  font-style: italic;
 }
 .bio-tl-dot {
   position: absolute;
@@ -109,22 +101,14 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--gold);
-  border: 2px solid var(--parchment);
+  background: var(--white);
+  border: 2px solid var(--gray-200);
   flex-shrink: 0;
 }
-.bio-tl-text {
+.bio-tl-event {
   font-size: var(--text-base);
-  color: var(--ink-mid);
+  color: var(--gray-600);
   line-height: 1.7;
-}
-
-/* Legacy */
-.bio-legacy p {
-  font-size: var(--text-lg);
-  color: var(--ink-mid);
-  line-height: 1.85;
-  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 640px) {
