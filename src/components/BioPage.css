@@ -1,0 +1,143 @@
+.bio-essay p {
+  font-size: var(--text-lg);
+  line-height: 1.9;
+  color: var(--ink-mid);
+  margin-bottom: 1.4rem;
+}
+.bio-essay p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  line-height: 0.8;
+  margin: 0.1em 0.1em 0 0;
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+.bio-pull-quote {
+  border-left: 3px solid var(--gold);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  background: rgba(200, 169, 110, 0.06);
+}
+.bio-pull-quote p {
+  font-family: var(--font-display);
+  font-size: var(--text-xl) !important;
+  font-style: italic;
+  color: var(--ink) !important;
+  margin: 0 0 0.5rem !important;
+  line-height: 1.5 !important;
+}
+.bio-pull-quote cite {
+  font-family: var(--font-accent);
+  font-size: var(--text-sm);
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+/* Facts grid */
+.bio-facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid var(--parchment-deep);
+}
+.bio-fact {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--parchment-deep);
+  align-items: start;
+}
+.bio-fact:last-child {
+  border-bottom: none;
+}
+.bio-fact-label {
+  font-family: var(--font-accent);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-top: 0.1rem;
+}
+.bio-fact-value {
+  font-size: var(--text-base);
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+/* Life timeline */
+.bio-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 7rem;
+}
+.bio-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5.5rem;
+  top: 0.6rem;
+  bottom: 0;
+  width: 1px;
+  background: var(--parchment-deep);
+}
+.bio-tl-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1.75rem;
+  position: relative;
+}
+.bio-tl-year {
+  position: absolute;
+  left: -7rem;
+  width: 5rem;
+  text-align: right;
+  font-family: var(--font-accent);
+  font-size: var(--text-sm);
+  color: var(--gold-dark);
+  letter-spacing: 0.05em;
+  padding-top: 0.15rem;
+  font-style: italic;
+}
+.bio-tl-dot {
+  position: absolute;
+  left: -1.55rem;
+  top: 0.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--parchment);
+  flex-shrink: 0;
+}
+.bio-tl-text {
+  font-size: var(--text-base);
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+/* Legacy */
+.bio-legacy p {
+  font-size: var(--text-lg);
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .bio-fact {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .bio-timeline {
+    padding-left: 4rem;
+  }
+  .bio-tl-year {
+    left: -4rem;
+    width: 3.5rem;
+    font-size: 12px;
+  }
+}

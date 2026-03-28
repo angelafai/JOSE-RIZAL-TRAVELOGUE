@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
+
+/* -- Design Tokens ------------*/
+
+:root {
+  --parchment: #f5edda;
+  --parchment-mid: #ede0c4;
+  --parchment-deep: #d9c9a3;
+  --parchment-dark: #c4b08a;
+  --ink: #1a140c;
+  --ink-mid: #3a2e1e;
+  --ink-light: #6b5a3e;
+  --ink-faint: #9c8b6e;
+  --gold: #c8a96e;
+  --gold-light: #e8d4a0;
+  --gold-dark: #a07840;
+  --red-seal: #8b2c2c;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-accent: "IM Fell English", Georgia, serif;
+
+  /* -- Accessible large base size */
+
+  --text-base: 20px;
+  --text-sm: 17px;
+  --text-xs: 15px;
+  --text-lg: 23px;
+  --text-xl: 28px;
+  --text-2xl: 36px;
+  --text-3xl: 48px;
+  --text-4xl: 64px;
+
+  --nav-width: 270px;
+  --radius: 3px;
+}
+
+/* -- Reset ----------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* -- This is the paper grain texture -------- */
+
+.paper-texture {
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.55;
+}
+
+/* -- Layout Shell ----------*/
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+  margin-left: var(--nav-width);
+  min-height: 100vh;
+  transition: margin-left 0.35s ease;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    margin-left: 0;
+  }
+}
+
+/* -- Shared Page Wrapper --------- */
+
+.page-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem 6rem;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.page-wrapper.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -- Shared Page Header ---------- */
+
+.page-header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--parchment-deep);
+}
+
+.page-eyebrow {
+  display: block;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--text-xs);
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.5rem;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.2em;
+}
+
+.page-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--ink-height);
+  margin-top: 0.5rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* -- Gold Rule -------- */
+
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin: 2rem 0;
+  opacity: 0.6;
+}
+.gold-rule.center {
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+/* -- Section Title --------- */
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--parchment-deep);
+}
+
+/* -- Ink divider ----------- */
+
+.ink-divider {
+  text-align: center;
+  color: var(--gold);
+  letter-spacing: 0.8em;
+  font-size: var(--text-xs);
+  margin: 2rem 0;
+}
+
+/* -- Scrollbar ----------- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--parchment-mid);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--parchment-dark);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
