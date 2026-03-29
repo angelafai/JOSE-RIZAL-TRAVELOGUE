@@ -88,7 +88,7 @@ export const countries = [
       "Ceylon (Sri Lanka) was under British rule during Rizal's visit, much like the Philippines was under Spain — a parallel that struck him deeply.",
     cities: ["Colombo"],
     mapCenter: { lat: 6.9271, lng: 79.8612 },
-    photos: [],
+    photos: [new URL("../assets/colombo.png", import.meta.url).href],
   },
   {
     id: 3,
