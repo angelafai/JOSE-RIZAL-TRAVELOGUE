@@ -245,9 +245,20 @@ export default function CountryPage() {
           <div className="cp-photos">
             {country.photos?.length > 0 ? (
               <div className="photo-grid">
-                {country.photos.map((src, i) => (
+                {country.photos.map((photo, i) => (
                   <div key={i} className="photo-frame">
-                    <img src={src} alt={`${country.name} ${i + 1}`} />
+                    <img
+                      src={photo.src}
+                      alt={photo.caption || `${country.name} ${i + 1}`}
+                    />
+                    <div className="photo-info">
+                      {photo.caption && (
+                        <p className="photo-caption">{photo.caption}</p>
+                      )}
+                      {photo.credit && (
+                        <p className="photo-credit">✏️ {photo.credit}</p>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -256,7 +267,9 @@ export default function CountryPage() {
                 <p>📷</p>
                 <p>
                   Add photos to{" "}
-                  <code>countries.js → photos: ["./your-image.jpg"]</code>
+                  <code>
+                    countries.js → photos: [&#123; src, caption, credit &#125;]
+                  </code>
                 </p>
               </div>
             )}

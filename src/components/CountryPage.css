@@ -477,3 +477,48 @@ code {
     text-align: center;
   }
 }
+
+/* -- Photos ------- */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.photo-frame {
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-info {
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--gray-100);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.photo-caption {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.photo-credit {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  font-style: italic;
+}
