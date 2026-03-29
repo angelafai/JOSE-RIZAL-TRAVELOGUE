@@ -51,14 +51,11 @@ export default function CountryPage() {
         scrollWheelZoom: false,
       });
       mapInstance.current = map;
-      L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg",
-        {
-          attribution:
-            '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-          maxZoom: 18,
-        },
-      ).addTo(map);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+      }).addTo(map);
       const icon = L.divIcon({
         className: "",
         html: `<div style="width:14px;height:14px;background:${country.coverColor};border:2px solid white;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.3);"></div>`,
