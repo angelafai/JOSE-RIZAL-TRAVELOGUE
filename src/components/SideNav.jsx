@@ -7,6 +7,12 @@ const NAV_ITEMS = [
   { path: "/bio", label: "About Rizal", icon: "👤", sub: "The man" },
   { path: "/journey", label: "Full Journey", icon: "🗓", sub: "Chronology" },
   {
+    path: "/references",
+    label: "References",
+    icon: "📌",
+    sub: "APA citations",
+  },
+  {
     path: "/countries",
     label: "Destinations",
     icon: "🌍",

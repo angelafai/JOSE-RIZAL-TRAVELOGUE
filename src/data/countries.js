@@ -92,7 +92,7 @@ export const countries = [
       {
         src: new URL("../assets/colombo.png", import.meta.url).href,
         caption: "Colombo, Ceylon's Capital",
-        credit: "",
+        credit: "Dayalyn",
       },
     ],
   },

@@ -247,18 +247,18 @@ export default function CountryPage() {
               <div className="photo-grid">
                 {country.photos.map((photo, i) => (
                   <div key={i} className="photo-frame">
-                    <img
-                      src={photo.src}
-                      alt={photo.caption || `${country.name} ${i + 1}`}
-                    />
                     <div className="photo-info">
                       {photo.caption && (
                         <p className="photo-caption">{photo.caption}</p>
                       )}
                       {photo.credit && (
-                        <p className="photo-credit">✏️ {photo.credit}</p>
+                        <p className="photo-credit">{photo.credit}</p>
                       )}
                     </div>
+                    <img
+                      src={photo.src}
+                      alt={photo.caption || `${country.name} ${i + 1}`}
+                    />
                   </div>
                 ))}
               </div>
