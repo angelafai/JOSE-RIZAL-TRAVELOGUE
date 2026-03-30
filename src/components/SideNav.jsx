@@ -7,12 +7,6 @@ const NAV_ITEMS = [
   { path: "/bio", label: "About Rizal", icon: "👤", sub: "The man" },
   { path: "/journey", label: "Full Journey", icon: "🗓", sub: "Chronology" },
   {
-    path: "/references",
-    label: "References",
-    icon: "📌",
-    sub: "APA citations",
-  },
-  {
     path: "/countries",
     label: "Destinations",
     icon: "🌍",
@@ -26,6 +20,12 @@ const NAV_ITEMS = [
   },
   { path: "/people", label: "People He Met", icon: "🤝", sub: "Connections" },
   { path: "/glossary", label: "Glossary", icon: "📚", sub: "Reference" },
+  {
+    path: "/references",
+    label: "References",
+    icon: "📌",
+    sub: "APA citations",
+  },
 ];
 
 export default function SideNav() {
@@ -53,11 +53,11 @@ export default function SideNav() {
       <nav className={`sidenav ${mobileOpen ? "open" : ""}`}>
         {/* Brand */}
         <div className="nav-brand">
-          <div className="nav-logo">JPR</div>
-          <div className="nav-brand-text">
-            <span className="nav-brand-name">José Rizal</span>
-            <span className="nav-brand-sub">Travels · 1882–1892</span>
-          </div>
+          <img
+            src="/logo.png"
+            alt="Jose Rizal's Travelogue"
+            className="nav-logo-img"
+          />
         </div>
 
         <div className="nav-divider" />

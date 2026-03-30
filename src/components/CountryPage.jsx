@@ -182,18 +182,80 @@ export default function CountryPage() {
 
         {tab === "events" && (
           <div className="cp-events">
-            {country.keyEvents.map((ev, i) => (
-              <div className="ev-card" key={i}>
-                <div
-                  className="ev-bar"
-                  style={{ background: country.coverColor }}
-                />
-                <div>
-                  <h3 className="ev-title">{ev.title}</h3>
-                  <p className="ev-body">{ev.body}</p>
+            {/* Person He Met */}
+            {country.personMet && (
+              <div className="ev-section">
+                <div className="ev-section-label">
+                  <span className="ev-section-icon">👤</span>
+                  Person He Met
+                </div>
+                <div className="ev-card">
+                  <div
+                    className="ev-bar"
+                    style={{ background: country.coverColor }}
+                  />
+                  <div>
+                    <h3 className="ev-title">{country.personMet.name}</h3>
+                    <p className="ev-body">{country.personMet.experience}</p>
+                  </div>
                 </div>
               </div>
-            ))}
+            )}
+
+            {/* Place He Visited */}
+            {country.placeVisited && (
+              <div className="ev-section">
+                <div className="ev-section-label">
+                  <span className="ev-section-icon">📍</span>
+                  Place He Visited
+                </div>
+                <div className="ev-card">
+                  <div
+                    className="ev-bar"
+                    style={{ background: country.coverColor }}
+                  />
+                  <div>
+                    <h3 className="ev-title">{country.placeVisited.name}</h3>
+                    <p className="ev-body">{country.placeVisited.experience}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Key Events */}
+            {country.keyEvents && country.keyEvents.length > 0 && (
+              <div className="ev-section">
+                <div className="ev-section-label">
+                  <span className="ev-section-icon">✦</span>
+                  Key Events
+                </div>
+                {country.keyEvents.map((ev, i) => (
+                  <div className="ev-card" key={i}>
+                    <div
+                      className="ev-bar"
+                      style={{ background: country.coverColor }}
+                    />
+                    <div>
+                      <h3 className="ev-title">{ev.title}</h3>
+                      <p className="ev-body">{ev.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Reflection */}
+            {country.reflection && (
+              <div className="ev-section">
+                <div className="ev-section-label">
+                  <span className="ev-section-icon">💭</span>
+                  Reflection
+                </div>
+                <div className="ev-reflection">
+                  <p>{country.reflection}</p>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
