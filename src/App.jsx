@@ -9,6 +9,7 @@ import WorksPage from "./components/WorksPage";
 import PeoplePage from "./components/PeoplePage";
 import GlossaryPage from "./components/GlossaryPage";
 import ReferencesPage from "./components/ReferencesPage";
+import TeamPage from "./components/TeamPage";
 import "./styles/global.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/people" element={<PeoplePage />} />
             <Route path="/glossary" element={<GlossaryPage />} />
             <Route path="/references" element={<ReferencesPage />} />
+            <Route path="/team" element={<TeamPage />} />
           </Routes>
         </main>
       </div>

@@ -26,6 +26,7 @@ const NAV_ITEMS = [
     icon: "📌",
     sub: "APA citations",
   },
+  { path: "/team", label: "Our Team", icon: "👥", sub: "Meet the group" },
 ];
 
 export default function SideNav() {

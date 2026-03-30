@@ -57,7 +57,13 @@ export const countries = [
       "Rizal was just 21 years old when he first set foot in Singapore — barely older than many of his eventual readers.",
     cities: ["Singapore City"],
     mapCenter: { lat: 1.3521, lng: 103.8198 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/singapore.jpg", import.meta.url).href,
+        caption: "Singapore",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
   {
     id: 2,
@@ -116,7 +122,7 @@ export const countries = [
       {
         src: new URL("../assets/colombo.png", import.meta.url).href,
         caption: "Colombo, Ceylon's Capital",
-        credit: "Dayalyn",
+        credit: "drawing by: Dayanalyn Makasasa",
       },
     ],
   },
@@ -174,7 +180,13 @@ export const countries = [
       "The Suez Canal had only opened in 1869 — just 13 years before Rizal sailed through it. He was among the first generation of travelers to use this world-changing shortcut.",
     cities: ["Port Said", "Suez"],
     mapCenter: { lat: 30.5852, lng: 32.2654 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/egypt.jpeg", import.meta.url).href,
+        caption: "Port Said, Egypt",
+        credit: "drawing by: Dayanalyn Makasasa",
+      },
+    ],
   },
   {
     id: 4,
@@ -246,7 +258,13 @@ export const countries = [
       "Rizal was so enchanted by Japan that he seriously considered staying permanently. His sense of duty to the Philippines is what ultimately made him leave.",
     cities: ["Yokohama", "Tokyo"],
     mapCenter: { lat: 35.6762, lng: 139.6503 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/japan.jpg", import.meta.url).href,
+        caption: "Japan",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
   {
     id: 5,
@@ -301,7 +319,13 @@ export const countries = [
       "Rizal climbed Mount Vesuvius on one of his first days in Europe — a fittingly dramatic introduction to the Old World.",
     cities: ["Naples"],
     mapCenter: { lat: 40.8518, lng: 14.2681 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/italy.png", import.meta.url).href,
+        caption: "Certosa, di San Martino",
+        credit: "drawing by: Dayanalyn Makasasa",
+      },
+    ],
   },
   {
     id: 6,
@@ -364,7 +388,18 @@ export const countries = [
       "Rizal could read and write in French fluently — one of over 20 languages and dialects he mastered in his lifetime.",
     cities: ["Marseilles", "Paris"],
     mapCenter: { lat: 48.8566, lng: 2.3522 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/france.jpeg", import.meta.url).href,
+        caption: "Lariboisière Hospital & Laennec Hospital",
+        credit: "drawing by: Dayanalyn Makasasa",
+      },
+      {
+        src: new URL("../assets/marseilles.jpeg", import.meta.url).href,
+        caption: "Château d'If",
+        credit: "drawing by: Dayanalyn Makasasa",
+      },
+    ],
   },
   {
     id: 7,
@@ -429,7 +464,13 @@ export const countries = [
       "Rizal finished his degree in medicine and passed his licentiate exam in Madrid — all while writing his first novel and leading a reform movement.",
     cities: ["Barcelona", "Madrid"],
     mapCenter: { lat: 40.4168, lng: -3.7038 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/spain.jpeg", import.meta.url).href,
+        caption: "Montjuic Castle",
+        credit: "drawing by: Dayanalyn Makasasa",
+      },
+    ],
   },
   {
     id: 8,
@@ -495,7 +536,13 @@ export const countries = [
       "Rizal performed a successful cataract surgery on his own mother, Teodora Alonso, restoring her sight. She had gone nearly blind while he was abroad.",
     cities: ["Hong Kong"],
     mapCenter: { lat: 22.3193, lng: 114.1694 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/hongkong.jpg", import.meta.url).href,
+        caption: "Victoria Hotel",
+        credit: "source by: internet",
+      },
+    ],
   },
   {
     id: 9,
@@ -549,7 +596,13 @@ export const countries = [
       "Macao was then a Portuguese colony — meaning Rizal visited territories under three different European colonial powers: Spanish, British, and Portuguese, all within a few months.",
     cities: ["Macao"],
     mapCenter: { lat: 22.1987, lng: 113.5439 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/macao.jpg", import.meta.url).href,
+        caption: "Catholic procession",
+        credit: "source by: internet",
+      },
+    ],
   },
   {
     id: 10,
@@ -600,7 +653,13 @@ export const countries = [
       "Prague was then part of the Austro-Hungarian Empire — Rizal visited it during the height of Czech national revival movements, which resonated with his own nationalist ideas.",
     cities: ["Prague"],
     mapCenter: { lat: 50.0755, lng: 14.4378 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/prague.png", import.meta.url).href,
+        caption: "Interior of St. Vitus Cathedral",
+        credit: "drawing by: Dayanalyn Makasasa",
+      },
+    ],
   },
   {
     id: 11,
@@ -651,7 +710,13 @@ export const countries = [
       "Vienna's famous school of medicine was then the most advanced in the world — a fitting stop for the physician-hero of the Philippines.",
     cities: ["Vienna"],
     mapCenter: { lat: 48.2082, lng: 16.3738 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/vienna.jpg", import.meta.url).href,
+        caption: "Vienna, Austria",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
   {
     id: 12,
@@ -723,7 +788,13 @@ export const countries = [
       "Noli Me Tangere was written partly in Madrid, partly in Paris, and finished in Berlin. Rizal pawned his coat to help pay for its printing.",
     cities: ["Heidelberg", "Berlin", "Leipzig", "Dresden"],
     mapCenter: { lat: 49.3988, lng: 8.6724 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/germany.jpg", import.meta.url).href,
+        caption: "Berlin, Germany",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
   {
     id: 13,
@@ -770,7 +841,13 @@ export const countries = [
       "Rousseau's concept of the 'social contract' — that governments derive authority from the consent of the governed — was central to Rizal's political philosophy.",
     cities: ["Geneva", "Zurich"],
     mapCenter: { lat: 46.818, lng: 8.2275 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/switzerland.jpg", import.meta.url).href,
+        caption: "Geneva, Switzerland",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
   {
     id: 14,
@@ -829,7 +906,13 @@ export const countries = [
       "El Filibusterismo was dedicated to GOMBURZA — Fathers Gómez, Burgos, and Zamora — Filipino priests executed by the Spanish in 1872.",
     cities: ["Brussels", "Ghent"],
     mapCenter: { lat: 50.8503, lng: 4.3517 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/belgium.png", import.meta.url).href,
+        caption: "Belgium",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
   {
     id: 15,
@@ -893,7 +976,13 @@ export const countries = [
       "Rizal was held in quarantine in San Francisco for two weeks — ironically, in the very nation that would later 'liberate' the Philippines from Spain in 1898.",
     cities: ["San Francisco", "Sacramento", "Denver", "Chicago", "New York"],
     mapCenter: { lat: 39.5, lng: -98.35 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/usa.png", import.meta.url).href,
+        caption: "USA",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
   {
     id: 16,
@@ -954,6 +1043,12 @@ export const countries = [
       "Rizal spent more time in the British Museum library than almost anywhere else in England — he went nearly every day for several months to transcribe Morga's work by hand.",
     cities: ["London", "Liverpool"],
     mapCenter: { lat: 51.5074, lng: -0.1278 },
-    photos: [],
+    photos: [
+      {
+        src: new URL("../assets/england.png", import.meta.url).href,
+        caption: "England",
+        credit: "drawing by: Jan Loyd Detomal",
+      },
+    ],
   },
 ];
