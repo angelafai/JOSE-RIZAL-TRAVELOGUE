@@ -6,32 +6,32 @@ const TEAM = [
   {
     name: "Sophia Jullia De Jesus",
     role: "Lead Coder / Made the whole website",
-    photo: new URL("../assets/team/julls.jpg", import.meta.url).href, // e.g. new URL("../assets/team/yourname.jpg", import.meta.url).href
+    photo: new URL("../assets/team/julls.jpg", import.meta.url).href,
   },
   {
     name: "Jan Loyd Detomal",
-    role: "Designers / Traditional drawings",
-    photo: null,
+    role: "Designer / Traditional drawings",
+    photo: new URL("../assets/team/lloyd.jpeg", import.meta.url).href,
   },
   {
     name: "Kirsten Denise Foja",
-    role: "Reaseacher/ Storytelling of the website",
+    role: "Reaseacher / Storytelling of the website",
     photo: new URL("../assets/team/kirsten.jpeg", import.meta.url).href,
   },
   {
     name: "Dayanalyn Makasasa",
-    role: "Designers / Digital drawings",
-    photo: null,
+    role: "Designer / Digital drawings",
+    photo: new URL("../assets/team/dayanalyn.jpeg", import.meta.url).href,
   },
   {
     name: "James Maverick Malasarte",
     role: "Researcher / Timeline & Key Events",
-    photo: null,
+    photo: new URL("../assets/team/james.png", import.meta.url).href,
   },
   {
     name: "Angela Faith Suba",
     role: "Lead Coder/ Assist in making the website",
-    photo: null,
+    photo: new URL("../assets/team/angela.jpeg", import.meta.url).href,
   },
 ];
 // ────────────────────────────────────────────────────────────

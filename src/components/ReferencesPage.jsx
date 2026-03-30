@@ -66,18 +66,15 @@ export default function ReferencesPage() {
         <span className="page-eyebrow">Sources</span>
         <h1 className="page-title">References</h1>
         <p className="page-subtitle">
-          All sources cited in APA 7th edition format. This travelogue draws on
-          10 credible academic and literary sources, including the required
-          textbook by Zaide and Zaide.
+          All sources cited in APA 7th edition format.
         </p>
       </header>
 
       <div className="ref-note">
         <p>
-          <strong>Note on sources:</strong> The first-person narration in this
-          travelogue is a creative historical reconstruction based on Rizal's
-          documented letters, diary entries, and travel journals, interpreted
-          through the scholarly sources listed below.
+          <strong>Note on sources:</strong> Based on Rizal's documented letters,
+          diary entries, and travel journals, interpreted through the scholarly
+          sources listed below.
         </p>
       </div>
 
